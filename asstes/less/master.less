@@ -27,7 +27,7 @@
         }
 
         &-item {
-            list-style: none;
+            
             padding-right: 18px;
             height: 24px;
             cursor: pointer;
@@ -86,7 +86,7 @@
         }
 
         &-item {
-            list-style: none;
+            
             padding-right: 23px;
             position: relative;
 
@@ -136,7 +136,7 @@
         }
         
         &-item {
-            list-style: none;
+            
             text-align: center;            
             position: relative;
         
@@ -182,7 +182,7 @@
             height: 44px;
             display: flex;
             justify-content: space-between;
-            list-style: none;
+            
             padding-right: 13px;
             position: relative;
         }
@@ -275,7 +275,7 @@
         }
 
         &-item {
-            list-style: none;
+            
             padding-right: 40px;
             &-link {
                 text-transform: capitalize;
@@ -287,9 +287,47 @@
     }
 
 }
+.rings {
+    &__video {
+       
+        &-img {
+            margin-top: 20px;
+            position: relative;
+            & img {
+                width: 100%;
+            }
+        }
+
+        &-stop {
+            & .stop,
+            &-icon {
+              position: absolute;
+              z-index: 10;
+              right: 50%;
+              transform: translate(50%, -50%);  
+            }
+
+            & .stop {
+                top: 50%;
+            }
+
+            &-icon {
+                top: 43%;
+            }
+
+        }
+
+
+        &-bottom,
+        &-above {
+            display: none;
+        }            
+    }
+}
+
 
 .article {
-    padding-top: 20px;
+    padding-top: 32px;
     &__navigation {
         
         display: flex;
@@ -311,7 +349,11 @@
             padding: 10px 0;
             display: flex;
             align-items: center;
+            color: @listing-text-color;
+            .fonts-2();
             & span {
+                .fonts-2();
+                color: @black-color-text;
                 background: #FAFAFA;
                 border-radius: 16px;
                 margin-right: 24px;
@@ -320,12 +362,14 @@
         }
     }
 
+    
+
     &__list {
         display: flex;
         align-items: center;
         &-item {
             padding: 16px 0;        
-            list-style: none;
+            
             flex: 1;
             text-align: center;
             border-bottom: 1px solid @border-color;
@@ -345,8 +389,8 @@
 }
 
 .categories {
-    &__img {
-        display: flex;       
+    padding-bottom: 24px;
+    &__img {     
         position: relative;
     }
 
@@ -467,7 +511,11 @@
             .fonts-3();
             color: @black-color-text;
         }
+        &-first {
+            order: 1;
+        }
     }
+
     &__nav {
         display: block;
         & p {
@@ -479,6 +527,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-top: 10px;
+
             & h1 {
             height: 48px;
             line-height: 48px;
@@ -486,6 +536,52 @@
             margin: 0;
             
         }
+        }
+    }
+
+    &__filter {
+        & p {
+            padding-top: 48px;
+            color: @listing-text-color;
+         }
+
+        &-heading {
+            padding-bottom: 34px;
+            display: block;
+
+            & h2 {
+                padding-bottom: 12px;
+            }
+            
+            &-list {
+                display: flex;
+                background-color: @header-color;
+                margin-bottom: 8px;
+            }
+
+            &-item {
+                padding-right: 14px;
+            }
+
+            & p {
+                padding-top: 18px;
+            }
+        }
+
+        &-menu {
+            padding-top: 16px;
+            display: block;
+
+            &-list {
+
+            }
+
+            &-item {
+                .display-flex();
+                border-bottom: 1px solid @border-color;
+                align-items: center;
+               
+            }
         }
     }
 }
@@ -512,7 +608,7 @@
     &-item {
         display: block;
         line-height: 44px;
-        list-style: none;
+    
         flex: 1;
         text-align: center;
         cursor: pointer;
@@ -553,7 +649,7 @@
         }
 
         &-item {        
-            list-style: none;
+            
 
             &-link {
                 text-decoration: none;
@@ -622,7 +718,7 @@
 
         &-item {
             flex: 1;
-            list-style: none;     
+                 
             
             &:first-child {
                 & img {
@@ -667,13 +763,13 @@
         }
 
         &-star-item {
-            list-style: none;
+            
             padding-right: 4px;
             cursor: pointer;
         }
          
         &-item {
-            list-style: none;
+            
             padding-bottom: 20px;
         }
 
@@ -730,7 +826,7 @@
         }
 
         &-item {
-            list-style: none;
+            
             padding-right: 20px;
             padding-bottom: 16px;
 
@@ -758,33 +854,100 @@
 }
 
 .control {
+    width: 100%;
+    top: 27%;
+    padding-top: 32px;
+    position: relative;
     display: block;
-    &__content {
-        padding: 0 32px;
-
+    cursor: pointer;
+    background-color: @white-color;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    &__down {
+        position: absolute;
+        top: 0;
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 12px;
+        
     }
-
+    
     &__stone {
         &-list {
+            .display-flex();
+            padding-top: 16px ;
+            margin-right: 36px
+        }
+        &-item {
+            
             display: flex;
             align-items: center;
 
-      
+            & h2 {
+                padding-left: 12px;
+            }
+        }
+    }
+
+    &__content {
+        background-color: @header-color;
+        padding: 12px 0;
+        margin-top: 12px;
+        &-list {
+            
 
         }
 
-        
+        &-item {
+            
+            display: flex;
+            align-items: center;
+            padding-bottom: 16px;
+
+            &-check  {
+                display: block;
+                & input {
+                                    
+                   width: 18px;
+                   height: 18px;
+                }
+            }
+
+            & h2 {
+                padding: 0 12px;
+            }
+        }
+    }
+
+    &__list {
+        margin-top: 30px;
+        &-item{
+            padding: 10px 0;
+            &:first-child {
+                border-bottom: none;            
+            }
+        }
+
+        &-apply {
+            background-color: @black-color-text;
+            border-radius: 2px;
+            & h1 {
+                color: @white-color;
+            }
+        }
     }
 
 }
 
 .modal {
     position: fixed;
+    z-index: 1000;
     top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    display: flex;
+    display: none;
 
         &&-open {
             display: block;          

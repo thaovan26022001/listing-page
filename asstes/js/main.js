@@ -29,3 +29,21 @@ function hideHeader() {
 actionHeaders.addEventListener('click', showHeader)
 
 exits.addEventListener('click', hideHeader)
+
+
+const actionControls = document.querySelectorAll('.js-action-2')
+const modalSecond = document.querySelector('.modal')
+const closeSeconds = document.querySelectorAll('.js-close-2')
+function showControl(){
+    modalSecond.classList.add('modal-open')
+}
+function hideControl(){
+    modalSecond.classList.remove('modal-open')
+}
+for  (const actionControl of actionControls){
+    actionControl.addEventListener('click', showControl)
+}
+
+for ( const closeSecond of closeSeconds) {
+    closeSecond.addEventListener('click', hideControl)
+}

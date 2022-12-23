@@ -42,6 +42,10 @@
         }
     }
 
+    .tools {
+        display: none;
+    }
+
     .footer {
         &__contact {
             &-help {
@@ -184,6 +188,64 @@
             }
         }
 
+    }
+
+    .article {
+        &__infor {
+            max-width: 500px;
+            &-title {
+                .fonts-7();
+            }
+            &-discount {
+                text-transform: uppercase;
+                padding: 24px 0;
+                & span {
+                    background-color: @border-color;
+                }
+            }
+
+            & p {
+                .fonts-8();
+                color: @listing-text-color;
+            }
+        }
+
+        &__list {
+            padding: 0 32px;
+            &-item {
+                flex: 0 0 10%;
+
+            }
+        }
+    
+    }
+
+
+    .rings {
+        &__text {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .categories {
+        padding-top: 14px;
+    }
+    .container {
+        &__head {
+            .display-flex();
+        }
+        
+        &__content {
+            &-list {
+                &:first-child {
+                    padding-right: 32px;
+                }
+            }
+        }
     }
 
     .footer {
