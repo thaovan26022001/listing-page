@@ -161,9 +161,12 @@ h3 {
 li {
     list-style: none;
 }
-
-.hidden {
+.hide-on-mobi {
     display: none;
+}
+
+.show-on-mobi {
+    display: block;
 }
 @media (max-width: 420px) {
 
@@ -175,5 +178,12 @@ li {
 }
 
 @media (min-width: 1024px) {
+    .show-on-pc {
+        display: block;
+    }
+
+    .hide-on-pc {
+        display: none;
+    }
 
 }

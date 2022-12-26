@@ -42,8 +42,12 @@
         }
     }
 
-    .tools {
-        display: none;
+    .article{
+        &__infor {
+            &-title {
+                .fonts-4();
+            }
+        }
     }
 
     .footer {
@@ -59,10 +63,6 @@
 }
 
 @media (min-width: 1024px) {
-    
-    .hidden {
-        display: block;
-    }
 
     .header {
         &__hide-on-pc {
@@ -214,12 +214,14 @@
             padding: 0 32px;
             &-item {
                 flex: 0 0 10%;
+                & p {
+                    display: none
+                }
 
             }
         }
     
     }
-
 
     .rings {
         &__text {
@@ -246,6 +248,17 @@
                 }
             }
         }
+    }
+
+    .title {
+        & h1 {
+            .fonts-14();
+        }
+    
+    }
+
+    .tools {
+        display: none;
     }
 
     .footer {
