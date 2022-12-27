@@ -459,60 +459,75 @@
         padding-top: 20px;
 
         &-img {
+            
             filter: brightness(80%);
+          
         }
+
         &-item {
             display: block;
             text-decoration: none;
-            padding-bottom: 20px;
+            margin-top:  20px;
+
+            &:hover {
+                border: 1px solid @gray-line-color;
+            }
             
             &-img {
                 position: relative;
+
 
                 & div {
                     padding-top: 100%;
                     background-repeat: no-repeat;
                     background-size: cover;
-                    background-position: top center;                  
-                }              
+                    background-position: top center;   
+                                   
+                }       
+
                 & h1 {
                     color: @white-color;
                     position: absolute;
                     bottom: 30px;
                     left: 10px;
                 }
+
+            }
+            & h2 {
+                padding-left: 10px;
             }
 
             &-heart {
                     position: absolute;
                     top: 6px;
                     right: 4px;
-                }
+            }
 
-                &-diamond {
+            &-diamond {
                     position: absolute;
                     top: calc(100% - 30px);
-                    left: 0;
-                }
+                    left: 10px;
+            }
 
-                & p {
-                    padding: 6px 0;
+            & p {
+                    padding: 6px 0 6px 10px;
                     color: @listing-text-color;      
-                }
+            }
         }
 
         &-number {
             display: flex;
+            padding-left: 10px;
            
             & p {
-                padding: 0 12px 6px 0;
-                
+                padding: 0 12px 6px 0;               
             }
         }
 
         &-price {
             .fonts-3();
             color: @black-color-text;
+            padding-left: 10px;
         }
         &-first {
             order: 1;
@@ -525,6 +540,10 @@
             margin: 42px 0 16px 0;
             align-items: center;
         }
+
+       
+
+        
     }
 
     &__nav {

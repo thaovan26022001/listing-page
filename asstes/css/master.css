@@ -386,7 +386,10 @@
 .container__best-item {
   display: block;
   text-decoration: none;
-  padding-bottom: 20px;
+  margin-top: 20px;
+}
+.container__best-item:hover {
+  border: 1px solid #DBDEE6;
 }
 .container__best-item-img {
   position: relative;
@@ -403,6 +406,9 @@
   bottom: 30px;
   left: 10px;
 }
+.container__best-item h2 {
+  padding-left: 10px;
+}
 .container__best-item-heart {
   position: absolute;
   top: 6px;
@@ -411,14 +417,15 @@
 .container__best-item-diamond {
   position: absolute;
   top: calc(100% - 30px);
-  left: 0;
+  left: 10px;
 }
 .container__best-item p {
-  padding: 6px 0;
+  padding: 6px 0 6px 10px;
   color: #374454;
 }
 .container__best-number {
   display: flex;
+  padding-left: 10px;
 }
 .container__best-number p {
   padding: 0 12px 6px 0;
@@ -427,6 +434,7 @@
   font-size: 14px;
   font-weight: 700;
   color: #2D2D2D;
+  padding-left: 10px;
 }
 .container__best-first {
   order: 1;
