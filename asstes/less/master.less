@@ -42,7 +42,7 @@
             &-link {
                 .fonts-1();
                 color: @text-color;
-                text-decoration: none;
+                
             }
         }
     }
@@ -68,7 +68,7 @@
 
     &__menu {
         background-color: @header-color;
-        padding: 0 16px 6px 16px;
+        padding: 0 16px;
     }
 
     &__logo-big {
@@ -97,7 +97,7 @@
             &-link {
                 .fonts-1();
                 color: @text-color;
-                text-decoration: none;
+                
             }
              
         }
@@ -127,39 +127,28 @@
     }
 
     &__category {
+        
         &-list {
-            .display-flex();
-            .fonts-2();
+            display: flex;
             align-items: center;
-            padding: 0 4px 0 3px;
-            height: 44px;
-
+            .fonts-2();
         }
         
         &-item {
             text-align: center;            
             position: relative;
-        
+            flex: 1;
+            padding: 0 14px;
+                  
             &:first-child{
-                &::after {
-                    content: "";
-                    border-bottom: 2px solid @black-color-text;
-                    position: absolute;
-                    top: calc(100% + 2px);
-                    right: 4px;
-                    left: 1px;
-                }
+                border-bottom: 1px solid @black-color-text;
             }
             
             &-link {
                 .fonts-2();
                 color: @text-color;
-                text-decoration: none;
+                
             }  
-
-            &:first-child a{
-                color: @black-color-text;
-            }
         }
     }
 
@@ -189,7 +178,7 @@
         }
     
         &-logout-link {
-            text-decoration: none;
+           
             color: @black-color-text;
             align-items: center;
             padding-left: 20px;
@@ -253,7 +242,7 @@
         }
 
         &-link {
-            text-decoration: none;
+            
         }
 
          &-item {
@@ -280,7 +269,7 @@
             padding-right: 40px;
             &-link {
                 text-transform: capitalize;
-                text-decoration: none;
+                
                 .fonts-1();
                 color: @black-color-text
             }
@@ -334,7 +323,7 @@
         display: flex;
         align-items: center;
         &-link {
-            text-decoration: none;
+            
             .fonts-6();
             color: @black-color-text;
             text-transform: capitalize;
@@ -380,7 +369,7 @@
         &-link {
             .fonts-1();
             color: @black-color-text;
-            text-decoration: none;
+            
             line-height: 140%;
         }
     }
@@ -401,6 +390,7 @@
         display: flex;
         justify-content: center;
         padding: 24px 0;
+        cursor: pointer;
 
         & svg {
             margin-right: 8px;
@@ -458,19 +448,14 @@
     &__best {
         padding-top: 20px;
 
-        &-img {
-            
-            filter: brightness(80%);
-          
-        }
-
         &-item {
             display: block;
-            text-decoration: none;
+            
             margin-top:  20px;
 
             &:hover {
                 border: 1px solid @gray-line-color;
+                border-radius: 2px;
             }
             
             &-img {
@@ -540,11 +525,10 @@
             margin: 42px 0 16px 0;
             align-items: center;
         }
-
-       
-
         
     }
+
+   
 
     &__nav {
         display: flex;
@@ -570,7 +554,7 @@
         }
 
         &-down {
-            background-color: @header-color;
+            
             display: flex;
             align-items: center;
            
@@ -626,6 +610,8 @@
                 .display-flex();
                 border-bottom: 1px solid @border-color;
                 align-items: center;
+                cursor: pointer;
+                height: 44px;
 
                 &:last-child {
                     color: @border-color;
@@ -738,7 +724,7 @@
             
 
             &-link {
-                text-decoration: none;
+                
                 .fonts-3();
                 color: @white-color; 
             }
@@ -860,7 +846,7 @@
         }
 
         &-link {
-            text-decoration: none;
+            
             .fonts-10();
             color: @black-color-text;
             line-height: 1.8;
@@ -872,7 +858,7 @@
             &-link {
                 .fonts-10();
                 color: @black-color-text;
-                text-decoration: none;
+                
             }
         }
 
@@ -888,7 +874,7 @@
         padding-bottom: 48px;
 
         &-link {
-            text-decoration: none;
+            
             padding-left: 8px;
         }
     }
@@ -922,11 +908,11 @@
 
             &-link {
                 .fonts-1();
-                text-decoration: none;
+                
                 color: @text-color;
             }
 
-            &:first-child a{
+            &:hover a{
                 color: @black-color-text;
             }
         }
@@ -966,7 +952,7 @@
             margin-right: 36px
         }
         &-item {
-            
+            cursor: pointer;
             display: flex;
             align-items: center;
 
@@ -1019,8 +1005,50 @@
         }
     }
 
+    &__price {
+        width: 100%;
+
+        padding-top: 32px;
+        position: relative;
+        display: block;
+        cursor: pointer;
+        background-color: @white-color;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        
+        top: 50%;
+        & p {
+            color: @text-color;
+            padding-bottom: 12px;
+        }
+        &-min {
+                color: @text-color;
+                .fonts-1();
+                min-width: 142px;
+                height: 42px;
+                background-color: @white-color;
+                border: 1px solid @border-color;
+                outline: none;
+                &::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        height: 14px;
+                        border-left: 1px solid @black-color-text;
+                        left: 50%;
+                        top: 40%;
+                        transform: rotate(90deg);
+                }
+            }
+        &-range {
+            .display-flex();
+            position: relative;
+        }
+    }
+
 }
 
+.modal-2,
 .modal {
     position: fixed;
     z-index: 1000;

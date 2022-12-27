@@ -8,39 +8,10 @@
             background-color: @header-color;
             border-bottom: 1px solid @border-color;
         }
-
-        
-        &__category {
-            &-list {
-                padding: 0 4px 0 3px;
-            }
-
-            &-item {
-                padding: 8px 20px;
-                width: 118px;    
-            }
-        }
     }
 }   
 
 @media (min-width: 768px) {
-    .header {
-        &__category {
-            &-item {
-                &:first-child{
-                      position: relative;
-                    &::after {
-                        top: calc(100% + 5px);
-                        right: -4px;
-                        left: -7px;
-                        content: "";
-                        border-bottom: 2px solid @black-color-text;
-                        position: absolute;
-                    }
-                }
-            }
-        }
-    }
 
     .article{
         &__infor {
@@ -135,39 +106,28 @@
         &__category {
 
             &-list {
-                padding: 0;
+                
             }
 
             &-item {
-                padding-right: 60px;
-                &:last-child {
-                    padding-right: 0;
-                }
+                flex: none;
+                padding: 0 60px 0 0;
 
                 &:first-child{
-                    &::after {
-                        display: none;
+                    border-bottom: none;
+                    &::before {
+                        border-bottom: 1px solid #2D2D2D;
+                        position: absolute;
+                        right: 54px;
+                        left: -4px;
+                        content: "";
+                        top: 25px;
                     }
                 }
-
-                &:first-child a {
-                    position: relative;              
-                    &:first-child{
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            border-bottom: 1px solid @black-color-text;
-                            top: calc(100% + 14px);
-                            right: -2px;
-                            left: 0;
-                        }
-                    }
-
-                }
-
+                
                 &-link {
                     .fonts-1(); 
-
+                   
                     & p {
                         display: none;
                     }  
@@ -191,6 +151,14 @@
     }
 
     .article {
+        &__present {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
         &__infor {
             max-width: 500px;
             &-title {
@@ -223,15 +191,6 @@
     
     }
 
-    .rings {
-        &__text {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-    }
 
     .categories {
         padding-top: 14px;

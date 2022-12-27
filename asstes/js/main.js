@@ -1,3 +1,4 @@
+
 const actionMenus = document.querySelectorAll('.js-action')
 const modal = document.querySelector('.js-modal')
 const closes = document.querySelectorAll('.js-close')
@@ -47,3 +48,7 @@ for  (const actionControl of actionControls){
 for ( const closeSecond of closeSeconds) {
     closeSecond.addEventListener('click', hideControl)
 }
+
+
+
+

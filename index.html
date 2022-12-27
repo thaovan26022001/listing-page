@@ -32,8 +32,7 @@
                         </li>
                         <li class="header__navbar-item">
                             <a href="" class="header__navbar-item-link">It</a>
-                        </li>
-                      
+                        </li>                     
                     </ul>             
                     <ul class="header__mobile-list hide-on-pc ">
                         <li class="header__mobile-item p-2 js-action-1">
@@ -157,7 +156,6 @@
                                 </ul>
                                
                             </div> 
-                            
                         </div> 
                         <div class="header__firstmenu">
                             <ul class="header__firstmenu-list">
@@ -369,6 +367,7 @@
                         </li>
                     </ul>
                 </div>
+                
             </div>
         </header>
         <!--ARTICLE-->
@@ -393,10 +392,10 @@
                     <a href="" class="article__navigation-link">rings</a>
 
                 </div>         
-                <div class=" col c-12 article__present">
+                <div class=" col c-12 article__container">
                     <div class="row">
                         <div class="col c-12 l-6  p-32 ">
-                            <div class="rings__text">
+                            <div class="article__present">
                                 <div class="article__infor ">
                                     <h1 class="article__infor-title">
                                         Rings 
@@ -545,8 +544,8 @@
                                             <h2>Diamonds</h2>                            
                                         </li>   
                                         <li class="control__stone-item"> 
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                                <path d="M16.2071 6.20697L10 12.4141L3.79291 6.20697" stroke="#637284"></path>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                                <path d="M0.792908 7.20709L7 1L13.2071 7.20709" stroke="#637284"/>
                                             </svg>
                                         </li>          
                                     </ul>          
@@ -628,11 +627,11 @@
                                             <svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4" fill="none">
                                                 <rect width="4" height="4" fill="#DBDEE6"/>
                                             </svg>
-                                            <h2>Diamonds</h2>                            
+                                            <h2>Precious stones</h2>                            
                                         </li>   
                                         <li class="control__stone-item"> 
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                                <path d="M16.2071 6.20697L10 12.4141L3.79291 6.20697" stroke="#637284"></path>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                                <path d="M0.792908 7.20709L7 1L13.2071 7.20709" stroke="#637284"/>
                                             </svg>
                                         </li>          
                                     </ul>          
@@ -644,64 +643,64 @@
                                                 <input type="radio" checked="checked" name="radio">
                                                 <span class="control__content-item-checkmark"></span>
                                             </label>
-                                            <h2>Black diamond</h2>
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="21" viewBox="0 0 23 21" fill="none">
-                                                <rect width="23" height="21" fill="url(#pattern0)"/>
-                                                <defs>
-                                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                <use xlink:href="#image0_13296_14375" transform="translate(-0.0154278) scale(0.0147265 0.016129)"/>
-                                                </pattern>
-                                                <image id="image0_13296_14375" width="70" height="62" xlink:href="data:image/png;base64,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"/>
-                                                </defs>
-                                            </svg>
+                                            <h2>Emerald</h2>
+                                            <img src="./asstes/svg/pric-1.png" alt="">
                                         </li>
                                         <li class="control__content-item">
                                             <label class="control__content-item-check">
                                                 <input type="radio" checked="checked" name="radio">
                                                 <span class="control__content-item-checkmark"></span>
                                             </label>
-                                            <h2>White diamond</h2>
-                                            <img src="./asstes/svg/img-icon-1.png" alt="">
+                                            <h2>Ruby</h2>
+                                            <img src="./asstes/svg/pric-2.png" alt="">
                                         </li>
                                         <li class="control__content-item">
                                             <label class="control__content-item-check">
                                                 <input type="radio" checked="checked" name="radio">
                                                 <span class="control__content-item-checkmark"></span>
                                             </label>
-                                            <h2>Yellow diamond</h2>
-                                            <img src="./asstes/svg/img-icon-2.png" alt="">                      
+                                            <h2>Blue saphire</h2>
+                                            <img src="./asstes/svg/pric-3.png" alt="">                      
                                         </li>
                                         <li class="control__content-item">
                                             <label class="control__content-item-check">
                                                 <input type="radio" checked="checked" name="radio">
                                                 <span class="control__content-item-checkmark"></span>
                                             </label>
-                                            <h2>Blue diamond</h2>
-                                            <img src="./asstes/svg/img-icon-3.png" alt="">                       
+                                            <h2>White saphire</h2>
+                                            <img src="./asstes/svg/pric-4.png" alt="">                       
                                         </li>
                                         <li class="control__content-item">
                                             <label class="control__content-item-check">
                                                 <input type="radio" checked="checked" name="radio">
                                                 <span class="control__content-item-checkmark"></span>
                                             </label>
-                                            <h2>Green diamond</h2>
-                                            <img src="./asstes/svg/img-icon-4.png" alt="">                     
+                                            <h2>Pink saphire</h2>
+                                            <img src="./asstes/svg/pric-4.png" alt="">                     
                                         </li>
                                         <li class="control__content-item">
                                             <label class="control__content-item-check">
                                                 <input type="radio" checked="checked" name="radio">
                                                 <span class="control__content-item-checkmark"></span>
                                             </label>
-                                            <h2>Brown diamond</h2>
-                                            <img src="./asstes/svg/img-icon-5.png" alt="">                       
+                                            <h2>Yellow saphire</h2>
+                                            <img src="./asstes/svg/pric-5.png" alt="">                       
                                         </li>
                                         <li class="control__content-item">
                                             <label class="control__content-item-check">
                                                 <input type="radio" checked="checked" name="radio">
                                                 <span class="control__content-item-checkmark"></span>
                                             </label>
-                                            <h2>Black diamond</h2>
-                                            <img src="./asstes/svg/img-icon-6.png" alt="">                     
+                                            <h2>Black saphire</h2>
+                                            <img src="./asstes/svg/pric-6.png" alt="">                     
+                                        </li>
+                                        <li class="control__content-item">
+                                            <label class="control__content-item-check">
+                                                <input type="radio" checked="checked" name="radio">
+                                                <span class="control__content-item-checkmark"></span>
+                                            </label>
+                                            <h2>Orange saphire</h2>
+                                            <img src="./asstes/svg/pric-7.png" alt="">                     
                                         </li>
                                     </ul>
                     
@@ -997,7 +996,7 @@
                                 <div class="col c-12 m-12 l-2-5 container__best-product hide-on-pc">
                                     <a href="#" class="container__best-item">
                                         <div class="container__best-item-img">
-                                            <div class="img" style="background-image: url(./asstes/svg/img-14.png);"></div>                                
+                                            <div class="img filter" style="background-image: url(./asstes/svg/img-14.png);"></div>                                
                                             <h1>GLAMIRA Bridal Set Crinkly Ring (For Her)</h1>                           
                                         </div>   
                                     </a >
@@ -1142,7 +1141,7 @@
                                 <div class="col c-12 m-4 l-2-5  hide-on-mobi show-on-pc">
                                     <a href="#" class="container__best-item">
                                         <div class="container__best-item-img">
-                                            <div class="img" style="background-image: url(./asstes/svg/img-14.png);"></div>                                 
+                                            <div class="img filter" style="background-image: url(./asstes/svg/img-14.png);"></div>                                 
                                             <h1>GLAMIRA Bridal Set Crinkly Ring (For Her)</h1>                           
                                         </div>   
                                     </a >
@@ -1526,12 +1525,11 @@
                                             $1 394
                                         </div>
                                     </a >
-                                </div>
-                                
+                                </div>                               
                                 <div class="col c-1 m-4 l-2-5  hide-on-mobi show-on-pc">
                                     <a href="#" class="container__best-item">
                                         <div class="container__best-item-img">
-                                            <div class="img" style="background-image: url(./asstes/svg/img-18.png);"></div>                                  
+                                            <div class="img filter" style="background-image: url(./asstes/svg/img-18.png);"></div>                                  
                                             <h1>GLAMIRA Bridal Set Crinkly Ring (For Her)</h1>                           
                                         </div>   
                                     </a >
@@ -1879,12 +1877,10 @@
                                             $1 394
                                         </div>
                                     </a>
-                                </div>     
-                                
-                                                           
+                                </div>                                                                                  
                             </div>
-                        </div>
-    
+                        </div>  
+                        
                     </div>
                 </div>
             </section>
@@ -2067,7 +2063,6 @@
                             <img src="./asstes/svg/img-icon-6.png" alt="">                     
                         </li>
                     </ul>
-    
                 </div>
                 <div class="control__stone p-32">               
                     <ul class="control__stone-list">
@@ -2118,8 +2113,68 @@
                         <h1>Apply</h1>
                     </li>
                 </ul>             
+            </div> 
+            <div class=" control__price">
+                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="11" viewBox="0 0 42 11" fill="none" class="control__down ">
+                    <path d="M1 1L21.1399 9L41 1" stroke="#DBDEE6" stroke-width="2"></path>
+                </svg>
+                <div class="control__stone p-32">
+                    <h1>Price</h1>
+                    <div class="control__content">
+                        <ul class="control__content-list p-32">
+                            <li class="control__content-item">
+                                <label class="control__content-item-check">
+                                    <input type="radio" checked="checked" name="radio">
+                                    <span class="control__content-item-checkmark"></span>
+                                </label>
+                                <h2>Under $100</h2>                             
+                            </li>
+                            <li class="control__content-item">
+                                <label class="control__content-item-check">
+                                    <input type="radio" checked="checked" name="radio">
+                                    <span class="control__content-item-checkmark"></span>
+                                </label>
+                                <h2>$100 — 500</h2>
+                                
+                            </li>
+                            <li class="control__content-item">
+                                <label class="control__content-item-check">
+                                    <input type="radio" checked="checked" name="radio">
+                                    <span class="control__content-item-checkmark"></span>
+                                </label>
+                                <h2>$500 — 1000</h2>
+                                                      
+                            </li>
+                            <li class="control__content-item">
+                                <label class="control__content-item-check">
+                                    <input type="radio" checked="checked" name="radio">
+                                    <span class="control__content-item-checkmark"></span>
+                                </label>
+                                <h2>$1000 — 2000</h2>
+                                                   
+                            </li>
+                            <li class="control__content-item">
+                                <label class="control__content-item-check">
+                                    <input type="radio" checked="checked" name="radio">
+                                    <span class="control__content-item-checkmark"></span>
+                                </label>
+                                <h2>Over $2000</h2>
+                                                   
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <p>Range</p>
+                    <div class="control__price-range">
+                        <button class="control__price-min">$ min</button>
+                        <button class="control__price-min">$ min</button>
+                    </div>
+                </div>
             </div>
+               
         </div>
+        
+        
 
         <!--FOOTER-->
         <footer class="footer">
@@ -2411,8 +2466,7 @@
                 <div class="footer__bottom-year">
                     Glamira 2008 - 2022
                 </div>
-            </div>
-            
+            </div>        
         </footer>
         
        
