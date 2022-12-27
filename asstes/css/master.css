@@ -447,17 +447,28 @@
   align-items: center;
 }
 .container__nav {
-  display: block;
-  padding-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  flex-direction: column;
+  row-gap: 10px;
 }
 .container__nav p {
-  text-align: center;
+  position: relative;
+}
+.container__nav p::after {
+  content: "";
+  border-bottom: 2px solid #2D2D2D;
+  position: absolute;
+  top: calc(100% + 2px);
+  right: 70%;
+  left: 0;
 }
 .container__nav-down {
   background-color: #FAFAFA;
   display: flex;
   align-items: center;
-  justify-content: center;
   margin-top: 10px;
 }
 .container__nav-down h1 {
