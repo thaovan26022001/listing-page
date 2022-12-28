@@ -326,11 +326,11 @@
   margin-right: 8px;
 }
 .container__head {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 .container__title {
   display: flex;
-  align-items: center;
   padding-bottom: 10px;
 }
 .container__title h2 {
@@ -358,6 +358,53 @@
 }
 .container__content-icon svg:first-child {
   margin-right: 12px;
+}
+.container__content-menu {
+  position: relative;
+}
+.container__content-menu:hover .container__content-menu-list {
+  display: block;
+}
+.container__content-menu-list {
+  position: absolute;
+  top: calc(100% + 14px);
+  text-align: center;
+  display: none;
+  background-color: #FAFAFA;
+  width: 187px;
+  box-shadow: 0 1px 5px #DBDEE6;
+  padding: 24px 0;
+  z-index: 10;
+  right: -40px;
+}
+.container__content-menu-list::after {
+  content: "";
+  position: absolute;
+  height: 40px ;
+  width: 100%;
+  top: -22px;
+  right: 0;
+}
+.container__content-menu-item {
+  line-height: 44px;
+  height: 44px;
+}
+.container__content-menu-item a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2D2D2D;
+}
+.container__content-menu-finish {
+  display: flex;
+  align-items: center;
+}
+.container__content-menu-finish svg {
+  margin-right: 12px;
+}
+.container__content-menu-finish a {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2D2D2D;
 }
 .container__best {
   padding-top: 20px;
@@ -419,6 +466,7 @@
   order: 1;
 }
 .container__best-text {
+  height: 44px;
   display: flex;
   justify-content: space-between;
   background-color: #FAFAFA;
@@ -757,9 +805,10 @@
   padding: 0 37px;
 }
 .control {
+  top: 20%;
+  overflow-y: scroll;
   width: 100%;
-  height: 100%;
-  top: 27%;
+  height: 80%;
   padding-top: 32px;
   position: relative;
   display: block;
@@ -1047,6 +1096,9 @@
     background-color: #FAFAFA;
     border-bottom: 1px solid #DBDEE5;
   }
+  .container__content {
+    display: block;
+  }
 }
 @media (min-width: 768px) {
   .article__infor-title {
@@ -1115,8 +1167,8 @@
   .header__category-item:first-child::before {
     border-bottom: 1px solid #2D2D2D;
     position: absolute;
-    right: 54px;
-    left: -4px;
+    right: 60px;
+    left: 0;
     content: "";
     top: 25px;
   }
@@ -1177,9 +1229,14 @@
   .container__head {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
   }
   .container__content-list:first-child {
     padding-right: 32px;
+  }
+  .container__title {
+    padding-bottom: 0;
   }
   .title h1 {
     font-size: 32px;
@@ -1408,5 +1465,8 @@ h5 {
   }
   .hide-on-pc {
     display: none;
+  }
+  .show-on-pc-flex {
+    display: flex;
   }
 }

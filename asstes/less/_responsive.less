@@ -9,6 +9,14 @@
             border-bottom: 1px solid @border-color;
         }
     }
+
+    .container {
+        &__content {
+            display: block;
+        }
+    }
+
+   
 }   
 
 @media (min-width: 768px) {
@@ -118,8 +126,8 @@
                     &::before {
                         border-bottom: 1px solid #2D2D2D;
                         position: absolute;
-                        right: 54px;
-                        left: -4px;
+                        right: 60px;
+                        left: 0;
                         content: "";
                         top: 25px;
                     }
@@ -198,6 +206,8 @@
     .container {
         &__head {
             .display-flex();
+            flex-direction: row;
+            align-items: center;
         }
         
         &__content {
@@ -206,6 +216,10 @@
                     padding-right: 32px;
                 }
             }
+        }
+
+        &__title {
+            padding-bottom: 0;
         }
     }
 

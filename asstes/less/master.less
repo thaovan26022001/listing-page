@@ -402,12 +402,14 @@
 .container {
     
     &__head {
-        display: block
+        display: flex;
+        flex-direction: column;
+        
     }
 
     &__title {
         display: flex;
-        align-items: center;
+       
         padding-bottom: 10px;
         & h2 {
             color: @listing-text-color;
@@ -440,6 +442,54 @@
             & svg {
                 &:first-child {
                     margin-right: 12px
+                }
+            }
+        }
+
+        &-menu {
+            position: relative;
+            &:hover &-list {
+                display: block;
+            }
+            &-list {
+                position: absolute;
+                top: calc(100% + 14px);
+                text-align: center;
+                display: none;
+                background-color: @header-color;
+                width: 187px;
+                box-shadow: 0 1px 5px @gray-line-color;
+                padding: 24px 0;
+                z-index: 10;
+                right: -40px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 40px ;
+                    width: 100%;
+                    top: -22px;
+                    right: 0;
+                }
+            }
+            &-item {
+                line-height: 44px;
+                height: 44px;
+                & a {
+                    .fonts-1();
+                    color: @black-color-text;
+                }
+            }
+
+            &-finish {
+                display: flex;
+                align-items: center;
+                & svg {
+                    margin-right: 12px;
+                }
+                & a {
+                    .fonts-3();
+                    color: @black-color-text;
                 }
             }
         }
@@ -519,6 +569,7 @@
         }
 
         &-text {
+            height: 44px;
             display: flex;
             justify-content: space-between;
             background-color: @header-color;
@@ -952,9 +1003,10 @@
 }
 
 .control {
+    top: 20%;
+    overflow-y: scroll;
     width: 100%;
-    height: 100%;
-    top: 27%;
+    height: 80%;
     padding-top: 32px;
     position: relative;
     display: block;
